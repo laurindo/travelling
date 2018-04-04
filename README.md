@@ -1,4 +1,4 @@
-### Application React/Redux to buy tickets for travel
+## Application React/Redux to buy tickets for travel
 
 
 #### Installation
