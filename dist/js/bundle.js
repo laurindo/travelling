@@ -343,7 +343,55 @@ eval("\n\nvar _App = __webpack_require__(/*! ./js/App */ \"./src/js/App.js\");\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _main = __webpack_require__(/*! ../main.css */ \"./src/main.css\");\n\nvar _main2 = _interopRequireDefault(_main);\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar App = function App() {\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    _react2.default.createElement(\n      \"p\",\n      null,\n      \"React here!\"\n    )\n  );\n};\nexports.default = App;\n\n_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById(\"root\"));\n\n//# sourceURL=webpack:///./src/js/App.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _main = __webpack_require__(/*! ../main.css */ \"./src/main.css\");\n\nvar _main2 = _interopRequireDefault(_main);\n\nvar _Header = __webpack_require__(/*! ./components/Header.jsx */ \"./src/js/components/Header.jsx\");\n\nvar _Header2 = _interopRequireDefault(_Header);\n\nvar _navItemsUtils = __webpack_require__(/*! ./utils/nav-items-utils */ \"./src/js/utils/nav-items-utils.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar App = function App() {\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    _react2.default.createElement(_Header2.default, { name: \"my header\", navItems: _navItemsUtils.HeaderNavItems }),\n    _react2.default.createElement(\n      \"h3\",\n      null,\n      \"React here!\"\n    )\n  );\n};\nexports.default = App;\n\n_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById(\"root\"));\n\n//# sourceURL=webpack:///./src/js/App.js?");
+
+/***/ }),
+
+/***/ "./src/js/components/Header.jsx":
+/*!**************************************!*\
+  !*** ./src/js/components/Header.jsx ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Logo = __webpack_require__(/*! ./Logo.jsx */ \"./src/js/components/Logo.jsx\");\n\nvar _Logo2 = _interopRequireDefault(_Logo);\n\nvar _NavMenu = __webpack_require__(/*! ./NavMenu.jsx */ \"./src/js/components/NavMenu.jsx\");\n\nvar _NavMenu2 = _interopRequireDefault(_NavMenu);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Header = function Header(_ref) {\n    var name = _ref.name,\n        navItems = _ref.navItems;\n\n    return _react2.default.createElement(\n        'header',\n        null,\n        _react2.default.createElement(_Logo2.default, null),\n        _react2.default.createElement(_NavMenu2.default, { navItems: navItems, position: 'right' })\n    );\n};\n\nexports.default = Header;\n\n//# sourceURL=webpack:///./src/js/components/Header.jsx?");
+
+/***/ }),
+
+/***/ "./src/js/components/Logo.jsx":
+/*!************************************!*\
+  !*** ./src/js/components/Logo.jsx ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Logo = function Logo() {\n  return _react2.default.createElement(\n    'h3',\n    null,\n    'Travelling'\n  );\n};\n\nexports.default = Logo;\n\n//# sourceURL=webpack:///./src/js/components/Logo.jsx?");
+
+/***/ }),
+
+/***/ "./src/js/components/NavMenu.jsx":
+/*!***************************************!*\
+  !*** ./src/js/components/NavMenu.jsx ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar NavMenu = function NavMenu(_ref) {\n    var navItems = _ref.navItems;\n\n    var getItems = function getItems() {\n        return navItems.map(function (item, index) {\n            return _react2.default.createElement(\n                'li',\n                { key: index },\n                _react2.default.createElement(\n                    'a',\n                    { href: item.link, className: item.color },\n                    _react2.default.createElement(\n                        'span',\n                        null,\n                        _react2.default.createElement('i', { className: 'fas fa-' + item.icon })\n                    ),\n                    _react2.default.createElement(\n                        'span',\n                        null,\n                        '\\xA0\\xA0',\n                        item.i18n\n                    )\n                )\n            );\n        });\n    };\n\n    return _react2.default.createElement(\n        'ul',\n        { className: 'horizontal' },\n        getItems()\n    );\n};\n\nexports.default = NavMenu;\n\n//# sourceURL=webpack:///./src/js/components/NavMenu.jsx?");
+
+/***/ }),
+
+/***/ "./src/js/utils/nav-items-utils.js":
+/*!*****************************************!*\
+  !*** ./src/js/utils/nav-items-utils.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nvar HeaderNavItems = exports.HeaderNavItems = [{\n    i18n: 'train',\n    name: 'train',\n    color: 'green',\n    link: '#',\n    icon: 'train'\n}, {\n    i18n: 'bus',\n    name: 'bus',\n    color: 'purple',\n    link: '#',\n    icon: 'bus'\n}, {\n    i18n: 'flight',\n    name: 'flight',\n    color: 'pink',\n    link: '#',\n    icon: 'plane'\n}];\n\n//# sourceURL=webpack:///./src/js/utils/nav-items-utils.js?");
 
 /***/ }),
 
