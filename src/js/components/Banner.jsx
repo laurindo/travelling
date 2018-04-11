@@ -1,8 +1,10 @@
+// @flow
+
 import React from 'react';
 import img from '../../img/travel.jpg';
 import Book from './Book.jsx';
 
-const Banner = ({}) => {
+const Banner = () => {
     return (
         <div className='banner'>
             <div className='backdrop'>&nbsp;</div>

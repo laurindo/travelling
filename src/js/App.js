@@ -6,6 +6,8 @@ import style from "../main.css";
 import Header from './components/Header.jsx';
 import Label from './components/Label.jsx';
 import Banner from './components/Banner.jsx';
+import Timer from './components/Timer.jsx';
+import TodoApp from './components/TodoApp.jsx';
 
 import { HeaderNavItems } from './utils/nav-items-utils';
 
@@ -16,6 +18,8 @@ const App = () => {
       <Label>Hello Label</Label>
       <h3>React here!</h3>
       <Banner />
+      <Timer />
+      <TodoApp />
     </div>
   );
 };

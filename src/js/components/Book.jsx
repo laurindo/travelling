@@ -2,7 +2,7 @@ import React from 'react';
 
 const Book = () => {
     return (
-        <div class="area-book">
+        <div className="area-book">
             oi
         </div>
     );
