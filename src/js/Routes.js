@@ -1,9 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import Home from '../../pages/Home.jsx';
-import Contact from '../../pages/Contact.jsx';
-import TodoApp from '../TodoApp.jsx';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
 
 const Routes = () => {
     return (

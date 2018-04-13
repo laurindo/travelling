@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Routes from './components/Routes';
-import Header from './components/Header.jsx';
+import Routes from './Routes';
+import Header from './components/Header';
 import { HeaderNavItems } from './utils/nav-items-utils';
 
 const BaseLayout = () => {

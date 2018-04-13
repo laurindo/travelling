@@ -1,15 +1,20 @@
-import React from "react";
+import React, { createContext } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import style from "../main.css";
-import BaseLayout from './BaseLayout.jsx';
+import BaseLayout from './BaseLayout';
+
+// Initialize a context
+import { Provider, Consumer } from './SetupContext';
 
 const App = () => {
   return (
-    <Router>
-      <BaseLayout />  
-    </Router>
+    <Provider value={{ name: 'laurindo' }}>
+      <Router>
+        <BaseLayout />  
+      </Router>
+    </Provider>
   );
 };
 export default App;
