@@ -1,26 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import style from "../main.css";
-
-import Header from './components/Header.jsx';
-import Label from './components/Label.jsx';
-import Banner from './components/Banner.jsx';
-import Timer from './components/Timer.jsx';
-import TodoApp from './components/TodoApp.jsx';
-
-import { HeaderNavItems } from './utils/nav-items-utils';
+import BaseLayout from './BaseLayout.jsx';
 
 const App = () => {
   return (
-    <div>
-      <Header name="my header" navItems={ HeaderNavItems } />
-      <Label>Hello Label</Label>
-      <h3>React here!</h3>
-      <Banner />
-      <Timer />
-      <TodoApp />
-    </div>
+    <Router>
+      <BaseLayout />  
+    </Router>
   );
 };
 export default App;
